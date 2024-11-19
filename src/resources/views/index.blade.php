@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
@@ -13,17 +13,19 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a href="/" class="header__logo">
+            <a class="header__logo" href="/">
                 Contact Form
             </a>
         </div>
     </header>
+
     <main>
         <div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2>お問い合わせ</h2>
             </div>
-            <form class="form">
+            <form class="form" action="/contacts/confirm" method="post">
+                @csrf
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">お名前</span>
@@ -34,7 +36,7 @@
                             <input type="text" name="name" placeholder="テスト太郎" />
                         </div>
                         <div class="form__error">
-                            <!-- バリデーション機能を実装後に記述   -->
+                            <!--バリデーション機能を実装したら記述します。-->
                         </div>
                     </div>
                 </div>
@@ -48,7 +50,7 @@
                             <input type="email" name="email" placeholder="test@example.com" />
                         </div>
                         <div class="form__error">
-                            <!-- バリデーション機能を実装後に記述   -->
+                            <!--バリデーション機能を実装したら記述します。-->
                         </div>
                     </div>
                 </div>
@@ -62,7 +64,7 @@
                             <input type="tel" name="tel" placeholder="09012345678" />
                         </div>
                         <div class="form__error">
-                            <!-- バリデーション機能を実装後に記述   -->
+                            <!--バリデーション機能を実装したら記述します。-->
                         </div>
                     </div>
                 </div>
@@ -76,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form__buttom">
+                <div class="form__button">
                     <button class="form__button-submit" type="submit">送信</button>
                 </div>
             </form>
